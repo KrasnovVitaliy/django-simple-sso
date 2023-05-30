@@ -101,7 +101,6 @@ def sso_login(request: WSGIRequest) -> HttpResponse:
     auth_token = extract_from_query_string(
         pattern=r"auth_token=[^&]+", query_str=unquote(query_str)
     )
-    logger.debug("Found auth_token: %s", auth_token)
     if auth_token:
         logger.debug("Found auth_token: %s", auth_token)
 
